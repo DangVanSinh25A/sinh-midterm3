@@ -19,7 +19,7 @@ const Search = () => {
         try {
             const response = await searchUsers(text);
             setUsers(response.items);
-            localStorage.setItem("search", JSON.stringify(response.items));
+            localStorage.setItem("search", JSON.stringify(response.items));// store search
             } 
         catch (error) {
             console.error("Error fetching data:", error);
